@@ -356,6 +356,71 @@ header {
 
 
 
+
+
+.features-block {
+  background: url(../img/bg-pic.jpg) no-repeat 50%/cover;
+  padding: 135px 0 120px;
+}
+.features-block ul {margin: 0 -15px;}
+.features-block li {
+  float: left;
+  padding: 0 15px;
+  text-align: center;
+  width: 25%;
+}
+.features-block h3 {
+  background: url(../img/f-icon1.png) no-repeat 50% 0;
+  color: #fefefe;
+  margin-bottom: 15px;
+  padding-top: 75px;
+}
+.features-block .clients h3 {background-image: url(../img/f-icon2.png);}
+.features-block .feedbacks h3 {background-image: url(../img/f-icon3.png);}
+.features-block .releases h3 {background-image: url(../img/f-icon4.png);}
+/*.features-block .circles {
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  box-shadow: 0 0 0 4px #000, 0 0 0 8px #fff
+}*/
+
+.features-block .circles {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  display: inline-block;
+  height: 16px;
+  position: relative;
+  width: 16px;
+}
+.features-block .circles:before {
+  content: '';
+  border-radius: 50%;
+  height: 7px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+}
+.features-block .projects .circles {border-color: #fc5f45;}
+.features-block .projects .circles:before {background-color: #fc5f45;}
+.features-block .clients .circles {border-color: #38c695;}
+.features-block .clients .circles:before {background-color: #38c695;}
+.features-block .feedbacks .circles {border-color: #b27cf5;}
+.features-block .feedbacks .circles:before {background-color: #b27cf5;}
+.features-block .releases .circles {border-color: #feb960;}
+.features-block .releases .circles:before {background-color: #feb960;}
+
+.features-block p {
+  color: rgba(254,254,254,0.7);
+  margin-bottom: 15px;
+}
+
+
+
 .article-about {
   background-color: #fff;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
@@ -366,7 +431,6 @@ header {
   margin-bottom: 25px;
 }
 .article-about .inner-content {
-  display: inline-block;
   font-size: 0;
 }
 .article-about .description-part {
@@ -447,4 +511,24 @@ header {
 .absolute-block h3 {
   color: #272727;
   font: 400 25px 'Poppins', serif;
+}
+
+
+.test-block .circle-block {
+  display: inline-block;
+  background-color: #fc5f45;
+  box-shadow: 0 0 0 4px #fff, 0 0 0 8px #fc5f45;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  color: #fff;
+  font: 500 15px/1 'Poppins', serif;
+  text-align: center;
+  vertical-align: middle;
+}
+.test-block .circle-block:before {
+  content:'';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
