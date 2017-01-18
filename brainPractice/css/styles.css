@@ -407,3 +407,44 @@ header {
   right: 32px;
   transform: translateY(-50%);
 }
+
+.work-steps .row-step {
+  position:relative;
+}
+
+.row-step img {
+  display: block;
+  margin: 0 auto;
+  width: 556px;
+}
+.row-step .absolute-block {
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+  height: 300px;
+  padding: 40px;
+  position: absolute;
+  top: -50px;
+  max-width: 460px;
+}
+.row-step .absolute-block.absolute-left {left: 0;}
+.row-step .absolute-block.absolute-right {right: 0;}
+
+.absolute-block .inner-holder {
+  height: 100%;
+  padding: 30px 10px 10px 85px;
+  position: relative;  
+  overflow: hidden;
+}
+.absolute-block .inner-holder:before {
+  content: attr(data-innernumber);
+  color: #e0e0e0;
+  font: 700 50px/1 'Libre Baskerville', serif;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.absolute-block h3 {
+  color: #272727;
+  font: 400 25px 'Poppins', serif;
+}
