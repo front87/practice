@@ -537,3 +537,17 @@ header {
   height: 100%;
   vertical-align: middle;
 }
+
+
+
+
+.pricing-list li {
+    width: 33.33333%;
+}
+.pricing-list .card-holder {
+    border-top: 2px solid transparent;
+}
+
+.pricing-list li:nth-child(1) .card-holder {border-color: #fc5f45;}
+.pricing-list li:nth-child(2) .card-holder {border-color: #38c695;}
+.pricing-list li:nth-child(3) .card-holder {border-color: #b27cf5;}
