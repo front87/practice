@@ -63,23 +63,23 @@ a {
 	border-radius: 25px;
 	font-size: 16px;
 	font-weight:600;
-	line-height: 50px;
+	/*line-height: 50px;*/
+    line-height: 1;
 	height: 50px;
 	text-align: center;
 	text-transform: uppercase;
 	width: 180px;
 	color: #fff;
 }
-.button.red {
-	background-color: #fc5f45;
+.button:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
-.button.green {
-	background-color: #38c695;
-	
-}
-.button.blue {
-	background-color: #b27cf5;
-}
+.button.red {background-color: #fc5f45;}
+.button.green {background-color: #38c695;}
+.button.blue {background-color: #b27cf5;}
 .button.red:hover,
 .button.green:hover,
 .button.blue:hover {
@@ -98,6 +98,40 @@ a {
 	border-color: #b27cf5;
 	color: #b27cf5;
 }
+
+
+.button.red.inverse,
+.button.green.inverse,
+.button.blue.inverse {
+    background-color: transparent;
+}
+.button.red.inverse {
+    border-color: #fc5f45;
+    color: #fc5f45;
+}
+.button.green.inverse {
+    border-color: #38c695;
+    color: #38c695;
+}
+.button.blue.inverse {
+    border-color: #b27cf5;
+    color: #b27cf5;
+}
+
+.button.red.inverse:hover {
+    background-color: #fc5f45;
+    color: #ffffff;
+}
+.button.green.inverse:hover {
+    background-color: #38c695;
+    color: #ffffff;
+}
+
+.button.blue.inverse:hover {
+    background-color: #b27cf5;
+    color: #ffffff;
+}
+
 
 .head-menu ul {font-size: 0;}
 .head-menu li {
@@ -318,7 +352,7 @@ header {
 .floated-list {
   margin: 0 -10px;
 }
-.floated-list li {  
+.floated-list > li {
   float: left;
   padding: 0 10px 20px;
   width: 33.33333%;
@@ -516,38 +550,84 @@ header {
 
 
 
-
-
-.test-block {padding: 50px 0;}
-.test-block .circle-block {
-  display: inline-block;
-  background-color: #fc5f45;
-  box-shadow: 0 0 0 4px #fff, 0 0 0 8px #fc5f45;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  color: #fff;
-  font: 500 15px/1 'Poppins', serif;
-  text-align: center;
-  vertical-align: middle;
-}
-.test-block .circle-block:before {
-  content:'';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-
-
-
-
-.pricing-list li {
+.pricing-list > li {
     width: 33.33333%;
 }
 .pricing-list .card-holder {
     border-top: 2px solid transparent;
 }
 
-.pricing-list li:nth-child(1) .card-holder {border-color: #fc5f45;}
-.pricing-list li:nth-child(2) .card-holder {border-color: #38c695;}
-.pricing-list li:nth-child(3) .card-holder {border-color: #b27cf5;}
+.pricing-list .card-holder.red {border-color: #fc5f45;}
+.pricing-list .card-holder.green {border-color: #38c695;}
+.pricing-list .card-holder.blue {border-color: #b27cf5;}
+
+
+
+.duble-circle-block {
+    display: inline-block;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    color: #fff;
+    margin: 28px 8px 44px;
+    font-size: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+.duble-circle-block.red {
+    background-color: #fc5f45;
+    box-shadow: 0 0 0 4px #fff, 0 0 0 8px #fc5f45;
+}
+.duble-circle-block.green {
+    background-color: #38c695;
+    box-shadow: 0 0 0 4px #fff, 0 0 0 8px #38c695;
+}
+.duble-circle-block.blue {
+    background-color: #b27cf5;
+    box-shadow: 0 0 0 4px #fff, 0 0 0 8px #b27cf5;
+}
+.duble-circle-block:before {
+    content:'';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.duble-circle-block .price {
+    display: inline-block;
+    font: 400 25px/1 'Poppins', serif;
+    vertical-align: middle;
+    width: 100%;
+}
+.duble-circle-block .price > span {
+    display: inherit;
+    font-size: 13px;
+}
+
+.pricing-list .card-holder {
+    background-color: #fff;
+    padding: 35px;
+    text-align: center;
+}
+.pricing-sheet {
+    margin-bottom: 40px;
+}
+.pricing-sheet > li {
+    color: #616161;
+    font: 400 15px/1 'Poppins', serif;
+    margin-bottom: 25px;
+}
+.pricing-sheet strong {
+    color: #272727;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: 1;
+    min-width: 20px;
+}
+.pricing-sheet .fa {
+    color: #272727;
+    font-size: inherit;
+    line-height: 1;
+    margin-right: 8px;
+}
+
