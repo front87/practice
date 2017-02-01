@@ -40,22 +40,35 @@ a {
   background: #fafafa;
   border: 1px solid #595959;
   display: flex;
-  height: 250px;
+  flex-flow: row wrap;
+  min-height: 300px;
   margin: 50px auto;
   max-width: 1000px;
   padding: 5px;
 }
 .flex-item {
   background-color: #ccc;
-  min-height: 80px;
-  margin: 0 0 5px;
+  min-height: 60px;
+  margin: 5px 0;
   min-width: 200px;
 }
+
 .flex-container.cont1 {
   justify-content: space-around;
-  align-items: flex-start;
-  flex-flow: row wrap;
 }
-.flex-container.cont1 .flex-item {
-  flex: 1 1 0;
+.flex-container.cont1 .flex-item {flex: 0 1 0;}
+
+
+.flex-container.cont2 {
+    flex-flow: column nowrap;
+    justify-content: center;
 }
+
+
+.flex-container.cont3 {
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.flex-container.cont3 .flex-item {flex: 0 0 0;}
+.flex-container.cont3 .flex-item:first-child {align-self: flex-end;}
+.flex-container.cont3 .flex-item:last-child {align-self: center;}
