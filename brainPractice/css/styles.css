@@ -670,3 +670,43 @@ header {
 	max-width: 100%;
 	
 }
+
+
+@media screen and (max-width:1024px) {
+	.contact-list li {
+		width: 50%;
+	}
+}
+
+@media (min-width:780px) and (max-width:1024px) {
+	.floated-list {margin: 0;}
+}
+
+@media screen and (max-width:780px) {
+	.contact-list li {width: 100%;}
+}
+@media screen and (max-width:1024px) {
+	.content-wrapper  {
+		overflow: hidden;
+	}
+	.head-menu ul {
+		position: absolute;
+		top: -100%;
+		left: 0;
+		background: #fff;
+		padding-top: 100px;
+		text-align: center;
+		width: 100%;
+		height: 100%;
+		transition: ease-in-out 0.3s transform;
+		z-index: 20;
+	}
+	.head-menu ul.active {
+		transform:translateY(100%);
+	}
+	.head-menu li {
+		display: block;
+		margin: 0 0 15px;
+		font-size: 18px;
+	}
+}
