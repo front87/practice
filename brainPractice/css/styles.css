@@ -686,9 +686,6 @@ header {
 	.contact-list li {width: 100%;}
 }
 @media screen and (max-width:1024px) {
-	.content-wrapper  {
-		overflow: hidden;
-	}
 	.head-menu ul {
 		position: absolute;
 		top: -100%;
